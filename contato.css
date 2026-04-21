@@ -52,11 +52,11 @@ nav a:hover {
     list-style: none;
     display: flex;
     justify-content: center; 
-    gap: 70px; 
+    gap: 100px; 
     justify-content: flex-end;
     padding: 0px;
     margin-top: 25px;
-    font-size: 20px;;
+    font-size: 20px;
     
 }
 
@@ -167,3 +167,31 @@ h2, h3, h4{
     -webkit-text-fill-color: transparent; 
 }
 
+.contato-final {
+    text-align: center;
+    margin-top: 100px;
+    color: white;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.redes img {
+    width: 100px;
+    transition: 0.3s;
+}
+
+.fim{
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.redes a:hover {
+    background-color: rgba(200, 200, 200, 0.15);
+}
