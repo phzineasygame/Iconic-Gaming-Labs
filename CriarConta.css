@@ -1,0 +1,150 @@
+nav {
+  width: 100%;
+  max-width: 800px; 
+  height: 90px;     
+  margin: 50px auto;   
+  background-color: #000000;
+  border: 1px solid rgba(255, 255, 255, 0.2); 
+  border-radius: 20px; 
+  display: flex; 
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  gap: 100px;                
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: center; 
+    gap: 70px; 
+    justify-content: flex-end;
+    padding: 0px;
+    margin-top: 25px;
+    font-size: 20px;
+    
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+}
+
+nav a:hover {
+    color: #3b82f6;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgba(200, 200, 200, 0.15);
+}
+
+.logo{
+    max-width: 70px; 
+    border-radius: 50%;
+}
+
+.LogoSoftware{
+    align-items: left;
+    justify-content: left;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(
+        100deg,
+        #040e4d,
+        #000000
+    );
+}
+
+.Login{
+    position: fixed;
+    top: 30px;
+    left: 200px;
+}
+
+.usuario{
+    width: 80px;
+    position: fixed;
+    top: 0;
+    margin-left: 100px;
+    margin-top: 15px;
+    text-align: center;
+}
+
+#usuario{
+    padding: 10px 25px;  
+}
+
+#usuario:hover{
+    background-color: aliceblue;
+}
+
+#senha{
+    padding: 10px 25px;   
+}
+
+#senha:hover{
+    background-color: aliceblue;
+}
+
+#email{
+    padding: 10px 25px;
+}
+
+#email:hover{
+    background-color: aliceblue;
+}
+
+#confirmarSenha{
+    padding: 10px 25px;
+}
+
+#confirmarSenha:hover{
+    background-color: aliceblue;
+}
+
+#botao{
+    padding: 20px 50px;
+    background-color: rgb(185, 181, 181);
+    font-weight: bold;
+    margin-left: 850px;
+    margin-top: 30px;
+}
+
+button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+#botao:hover{
+    background-color: lightslategrey;
+}
+
+div{
+    text-align: center;
+    margin-top: 300px;
+    
+}
+
+.fim{
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+h1{
+    font-size: 60px;
+    color: whitesmoke
+}

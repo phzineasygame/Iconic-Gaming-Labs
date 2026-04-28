@@ -81,8 +81,9 @@ nav a:hover {
 }
 
 .foto-pc{
-    width:90%;
+    width:50%;
     border-radius: 20px;
+    border: 2px solid whitesmoke;
 }
 
 .entenda-melhor {
