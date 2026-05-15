@@ -1,0 +1,125 @@
+/* Mesmo estilo de CriarConta.css */
+nav {
+    width: 100%;
+    max-width: 800px;
+    height: 90px;
+    margin: 50px auto;
+    background-color: #000000;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    gap: 100px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 70px;
+    justify-content: flex-end;
+    padding: 0;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    background-color: rgba(200, 200, 200, 0.15);
+}
+
+.logo {
+    max-width: 70px;
+    border-radius: 50%;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(100deg, #040e4d, #000000);
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    text-align: center;
+    margin-top: 200px;
+}
+
+h1 {
+    font-size: 60px;
+    color: whitesmoke;
+    margin-bottom: 40px;
+}
+
+#email, #senha {
+    padding: 15px 25px;
+    margin: 10px;
+    width: 300px;
+    border-radius: 10px;
+    border: none;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 16px;
+}
+
+#email::placeholder,
+#senha::placeholder {
+    color: #aaa;
+}
+
+#email:hover, #senha:hover {
+    background-color: rgba(255,255,255,0.2);
+}
+
+#botao {
+    padding: 15px 80px;
+    background-color: #3b82f6;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#botao:hover {
+    background-color: #2563eb;
+}
+
+.fim {
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+    margin-top: 150px;
+}
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .menu {
+        gap: 30px;
+        margin-top: 0;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #email, #senha {
+        width: 80%;
+    }
+}

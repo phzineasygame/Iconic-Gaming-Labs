@@ -1,11 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BuildCore Labs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="compatibilidade.css">
+    <title>Compatibilidade - BuildCore Labs</title>
 </head>
 <body>
-    <h1> se chegou até aqui, parabéns!!!!</h1>
+
+<!-- Top bar com logo e hambúrguer -->
+<header class="top-bar">
+    <img src="BuildCore Labs.png" class="logo" alt="BuildCore Labs">
+    <div class="hamburger" id="menu-toggle">☰</div>
+</header>
+
+<!-- Sidebar -->
+<nav class="sidebar" id="sidebar">
+    <div class="sidebar-header">
+        <img src="BuildCore Labs.png" class="logo-small" alt="Logo">
+        <span class="close-btn" id="close-sidebar">✕</span>
+    </div>
+    <ul>
+        <li><a href="tutoriais.html">📘 Tutoriais</a></li>
+        <li><a href="tutoriais.html#partes">🔧 O que cada peça faz</a></li>
+        <li><a href="contato.html">📞 Contato</a></li>
+        <li><a href="sobre.html">ℹ️ Sobre</a></li>
+    </ul>
+</nav>
+
+<main>
+    <h1>Verificador de Compatibilidade</h1>
+    <p class="desc">Selecione as peças abaixo e clique em "Verificar".</p>
+
+    <div class="selector-grid">
+        <div class="field">
+            <label for="cpu">Processador (CPU)</label>
+            <select id="cpu">
+                <option value="">Escolha uma CPU...</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="mobo">Placa-mãe</label>
+            <select id="mobo">
+                <option value="">Escolha a placa-mãe...</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="gpu">Placa de vídeo (GPU)</label>
+            <select id="gpu">
+                <option value="">Escolha uma GPU...</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="ram">Memória RAM</label>
+            <select id="ram">
+                <option value="">Escolha a RAM...</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="psu">Fonte (PSU)</label>
+            <select id="psu">
+                <option value="">Escolha a fonte...</option>
+            </select>
+        </div>
+        <div class="field">
+            <label for="case">Gabinete</label>
+            <select id="case">
+                <option value="">Escolha o gabinete...</option>
+            </select>
+        </div>
+    </div>
+
+    <button id="check-btn" class="btn-primary">Verificar Compatibilidade</button>
+
+    <div id="result" class="result-box"></div>
+</main>
+
+<footer class="fim">
+    <p>© 2026 BuildCore Labs</p>
+</footer>
+
+<script src="pecas.js"></script>
+<script src="compatibilidade.js"></script>
 </body>
 </html>
