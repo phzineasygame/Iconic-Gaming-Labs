@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Teste Busca</title>
+</head>
+<body>
+    <h1>Teste de Busca - Verificador de Compatibilidade</h1>
+    <div id="resultado"></div>
+
+    <script src="pecas.js"></script>
+    <script>
+        const resultDiv = document.getElementById('resultado');
+        
+        // Mapear ID de peça para seu objeto
+        const pecasMap = {};
+        
+        function populateDatalist(tipo, items) {
+            pecasMap[tipo] = {};
+            items.forEach(item => {
+                pecasMap[tipo][item.nome] = item;
+            });
+        }
+        
+        // Testar
+        populateDatalist('cpu', pecas.filter(p => p.tipo === 'cpu'));
+        
+        const cpuNome = "AMD Ryzen 5 3600";
+        const foundCPU = pecasMap['cpu'][cpuNome];
+        
+        let html = `<h2>Teste de Busca</h2>`;
+        html += `<p><strong>Buscando:</strong> ${cpuNome}</p>`;
+        html += `<p><strong>Encontrado:</strong> ${foundCPU ? 'Sim ✅' : 'Não ❌'}</p>`;
+        
+        if (foundCPU) {
+            html += `<p><strong>ID:</strong> ${foundCPU.id}</p>`;
+            html += `<p><strong>Socket:</strong> ${foundCPU.soquete}</p>`;
+            html += `<p><strong>TDP:</strong> ${foundCPU.tdp}W</p>`;
+        }
+        
+        // Contar total de CPUs
+        html += `<p><strong>Total de CPUs:</strong> ${Object.keys(pecasMap['cpu']).length}</p>`;
+        
+        // Mostrar primeiras 5 CPUs
+        html += `<h3>Primeiras 5 CPUs:</h3><ul>`;
+        Object.keys(pecasMap['cpu']).slice(0, 5).forEach(nome => {
+            html += `<li>${nome}</li>`;
+        });
+        html += `</ul>`;
+        
+        resultDiv.innerHTML = html;
+    </script>
+</body>
+</html>

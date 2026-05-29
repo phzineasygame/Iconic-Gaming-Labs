@@ -549,5 +549,89 @@ const pecas = [
 { id: 558, tipo: "case", nome: "Hayom GB1760 RGB", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
 { id: 559, tipo: "case", nome: "Hayom GB1775 Glass", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
 { id: 560, tipo: "case", nome: "Hayom Gamer Black Edition", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+// ================= GABINETES HAYOM =================
+{ id: 553, tipo: "case", nome: "Hayom GB1711", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 554, tipo: "case", nome: "Hayom GB1721", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 555, tipo: "case", nome: "Hayom GB1735", suportaFormato: ["Micro-ATX", "Mini-ITX"] },
+{ id: 556, tipo: "case", nome: "Hayom GB1740", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 557, tipo: "case", nome: "Hayom GB1752", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 558, tipo: "case", nome: "Hayom GB1760 RGB", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 559, tipo: "case", nome: "Hayom GB1775 Glass", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 560, tipo: "case", nome: "Hayom Gamer Black Edition", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+
+// ================= GABINETES RISE MODE =================
+{ id: 561, tipo: "case", nome: "Rise Mode Glass 06X", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 562, tipo: "case", nome: "Rise Mode Galaxy Curved", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 563, tipo: "case", nome: "Rise Mode Z3 Glass", suportaFormato: ["Micro-ATX", "Mini-ITX"] },
+{ id: 564, tipo: "case", nome: "Rise Mode X1 White", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 565, tipo: "case", nome: "Rise Mode Wave RGB", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 566, tipo: "case", nome: "Rise Mode Black Hawk", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 567, tipo: "case", nome: "Rise Mode Crystal Glass", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 568, tipo: "case", nome: "Rise Mode Dual Chamber", suportaFormato: ["E-ATX", "ATX", "Micro-ATX", "Mini-ITX"] },
+// ================= FONTES RISE MODE =================
+{ id: 569, tipo: "psu", nome: "Rise Mode Zeus 500W 80+ Bronze", potencia: 500 },
+{ id: 570, tipo: "psu", nome: "Rise Mode Zeus 600W 80+ Bronze", potencia: 600 },
+{ id: 571, tipo: "psu", nome: "Rise Mode Zeus 700W 80+ Bronze", potencia: 700 },
+{ id: 572, tipo: "psu", nome: "Rise Mode Atlas 650W 80+ Gold", potencia: 650 },
+{ id: 573, tipo: "psu", nome: "Rise Mode Atlas 750W 80+ Gold", potencia: 750 },
+{ id: 574, tipo: "psu", nome: "Rise Mode Atlas 850W 80+ Gold", potencia: 850 },
+
+// ================= COOLERS RISE MODE =================
+{ id: 575, tipo: "cooler", nome: "Rise Mode Frost RGB Air Cooler", tdpSuportado: 180 },
+{ id: 576, tipo: "cooler", nome: "Rise Mode Winter Black", tdpSuportado: 220 },
+{ id: 577, tipo: "cooler", nome: "Rise Mode Aura Ice 240MM", tdpSuportado: 250 },
+{ id: 578, tipo: "cooler", nome: "Rise Mode Aura Ice 360MM", tdpSuportado: 320 },
+{ id: 579, tipo: "cooler", nome: "Rise Mode RGB Fan Kit 3x120mm", tamanho: 120 },
+
+// ================= PERIFÉRICOS HAYOM =================
+{ id: 580, tipo: "periferico", nome: "Hayom TC320 Teclado Gamer RGB" },
+{ id: 581, tipo: "periferico", nome: "Hayom GM400 Mouse Gamer RGB" },
+{ id: 582, tipo: "periferico", nome: "Hayom Headset Gamer HV-H2232D" },
+{ id: 583, tipo: "periferico", nome: "Hayom Mousepad Speed MPG01" },
+
+// ================= MEMÓRIAS POPULARES BR =================
+{ id: 584, tipo: "ram", nome: "Rise Mode Z 16GB DDR4-3200", tipoRam: "DDR4" },
+{ id: 585, tipo: "ram", nome: "Rise Mode Diamond RGB 32GB DDR4-3600", tipoRam: "DDR4" },
+
+// ================= FONTES POPULARES BR =================
+{ id: 586, tipo: "psu", nome: "MSI MAG A650BN 650W", potencia: 650 },
+{ id: 587, tipo: "psu", nome: "Corsair CX650 650W Bronze", potencia: 650 },
+{ id: 588, tipo: "psu", nome: "DeepCool PK650D 650W", potencia: 650 },
+{ id: 589, tipo: "psu", nome: "XPG Core Reactor II VE 850W", potencia: 850 },
+
+// ================= GABINETES POPULARES BR =================
+{ id: 590, tipo: "case", nome: "Montech XR", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 591, tipo: "case", nome: "Aerocool Bolt", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 592, tipo: "case", nome: "Redragon Wideload Pro", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 593, tipo: "case", nome: "Pichau HX710L", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+{ id: 594, tipo: "case", nome: "Mancer Narok", suportaFormato: ["ATX", "Micro-ATX", "Mini-ITX"] },
+
+// ================= WATER COOLERS POPULARES BR =================
+{ id: 595, tipo: "cooler", nome: "DeepCool LE500 240MM", tdpSuportado: 260 },
+{ id: 596, tipo: "cooler", nome: "Cooler Master ML240L V2 RGB", tdpSuportado: 250 },
+{ id: 597, tipo: "cooler", nome: "Corsair H100 RGB", tdpSuportado: 280 },
+{ id: 598, tipo: "cooler", nome: "Rise Mode Aura Frost 240MM", tdpSuportado: 240 },
+{ id: 599, tipo: "cooler", nome: "NZXT Kraken 360 RGB", tdpSuportado: 320 },
+
+// ================= FANS RGB POPULARES =================
+{ id: 600, tipo: "cooler", nome: "Rise Mode Laser RGB Fan 120MM", tamanho: 120 },
+{ id: 601, tipo: "cooler", nome: "Cooler Master SickleFlow 120 ARGB", tamanho: 120 },
+{ id: 602, tipo: "cooler", nome: "Corsair AF120 RGB Elite", tamanho: 120 },
+{ id: 603, tipo: "cooler", nome: "DeepCool FC120 ARGB", tamanho: 120 },
+{ id: 604, tipo: "cooler", nome: "Lian Li UNI FAN SL120", tamanho: 120 },
+
+// ================= SSDs MAIS POPULARES =================
+{ id: 605, tipo: "ssd", nome: "Kingston NV2 1TB NVMe", interface: "NVMe" },
+{ id: 606, tipo: "ssd", nome: "WD Black SN770 1TB", interface: "NVMe" },
+{ id: 607, tipo: "ssd", nome: "Crucial P3 Plus 1TB", interface: "NVMe" },
+{ id: 608, tipo: "ssd", nome: "XPG S70 Blade 1TB", interface: "NVMe" },
+{ id: 609, tipo: "ssd", nome: "Samsung 990 EVO 1TB", interface: "NVMe" },
+
+// ================= SSDs SATA =================
+{ id: 610, tipo: "ssd", nome: "Kingston A400 480GB", interface: "SATA" },
+{ id: 611, tipo: "ssd", nome: "Crucial BX500 500GB", interface: "SATA" },
+{ id: 612, tipo: "ssd", nome: "WD Green 480GB", interface: "SATA" },
+{ id: 613, tipo: "ssd", nome: "SanDisk SSD Plus 480GB", interface: "SATA" },
+{ id: 614, tipo: "ssd", nome: "Gigabyte SSD 480GB", interface: "SATA" },
 
 ]

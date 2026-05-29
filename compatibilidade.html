@@ -9,23 +9,23 @@
 </head>
 <body>
 
-<!-- Top bar com logo e hambúrguer -->
+<!-- Top bar com logo e menu -->
 <header class="top-bar">
     <img src="BuildCore Labs.png" class="logo" alt="BuildCore Labs">
     <div class="hamburger" id="menu-toggle">☰</div>
 </header>
 
-<!-- Sidebar -->
+<!-- Sidebar da página de compatibilidade, onde o menu lateral abre -->
 <nav class="sidebar" id="sidebar">
     <div class="sidebar-header">
         <img src="BuildCore Labs.png" class="logo-small" alt="Logo">
         <span class="close-btn" id="close-sidebar">✕</span>
     </div>
     <ul>
-        <li><a href="tutoriais.html">📘 Tutoriais</a></li>
-        <li><a href="tutoriais.html#partes">🔧 O que cada peça faz</a></li>
-        <li><a href="contato.html">📞 Contato</a></li>
-        <li><a href="sobre.html">ℹ️ Sobre</a></li>
+        <li><a href="tutoriais.html">Tutoriais</a></li>
+        <li><a href="tutoriais.html#partes">O que cada peça faz</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
     </ul>
 </nav>
 
@@ -36,39 +36,57 @@
     <div class="selector-grid">
         <div class="field">
             <label for="cpu">Processador (CPU)</label>
-            <select id="cpu">
-                <option value="">Escolha uma CPU...</option>
-            </select>
+            <div class="search-wrapper">
+                <input type="text" id="cpu-search" class="search-input" placeholder="Buscar CPU..." autocomplete="off">
+                <span class="search-icon"></span>
+                <div id="cpu-suggestions" class="suggestions-dropdown"></div>
+            </div>
+            <input type="hidden" id="cpu">
         </div>
         <div class="field">
             <label for="mobo">Placa-mãe</label>
-            <select id="mobo">
-                <option value="">Escolha a placa-mãe...</option>
-            </select>
+            <div class="search-wrapper">
+                <input type="text" id="mobo-search" class="search-input" placeholder="Buscar placa-mãe..." autocomplete="off">
+                <span class="search-icon"></span>
+                <div id="mobo-suggestions" class="suggestions-dropdown"></div>
+            </div>
+            <input type="hidden" id="mobo">
         </div>
         <div class="field">
             <label for="gpu">Placa de vídeo (GPU)</label>
-            <select id="gpu">
-                <option value="">Escolha uma GPU...</option>
-            </select>
+            <div class="search-wrapper">
+                <input type="text" id="gpu-search" class="search-input" placeholder="Buscar GPU..." autocomplete="off">
+                <span class="search-icon"></span>
+                <div id="gpu-suggestions" class="suggestions-dropdown"></div>
+            </div>
+            <input type="hidden" id="gpu">
         </div>
         <div class="field">
             <label for="ram">Memória RAM</label>
-            <select id="ram">
-                <option value="">Escolha a RAM...</option>
-            </select>
+            <div class="search-wrapper">
+                <input type="text" id="ram-search" class="search-input" placeholder="Buscar RAM..." autocomplete="off">
+                <span class="search-icon"></span>
+                <div id="ram-suggestions" class="suggestions-dropdown"></div>
+            </div>
+            <input type="hidden" id="ram">
         </div>
         <div class="field">
             <label for="psu">Fonte (PSU)</label>
-            <select id="psu">
-                <option value="">Escolha a fonte...</option>
-            </select>
+            <div class="search-wrapper">
+                <input type="text" id="psu-search" class="search-input" placeholder="Buscar fonte..." autocomplete="off">
+                <span class="search-icon"></span>
+                <div id="psu-suggestions" class="suggestions-dropdown"></div>
+            </div>
+            <input type="hidden" id="psu">
         </div>
         <div class="field">
             <label for="case">Gabinete</label>
-            <select id="case">
-                <option value="">Escolha o gabinete...</option>
-            </select>
+            <div class="search-wrapper">
+                <input type="text" id="case-search" class="search-input" placeholder="Buscar gabinete..." autocomplete="off">
+                <span class="search-icon"></span>
+                <div id="case-suggestions" class="suggestions-dropdown"></div>
+            </div>
+            <input type="hidden" id="case">
         </div>
     </div>
 

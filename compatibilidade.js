@@ -1,12 +1,40 @@
+// Mapear ID de peça para seu objeto
+const pecasMap = {};
+
+// Dados de peças organizados por tipo
+const pecasPorTipo = {
+    cpu: [],
+    mobo: [],
+    gpu: [],
+    ram: [],
+    psu: [],
+    case: []
+};
+
 // Preencher os dropdowns com as peças do banco
 document.addEventListener('DOMContentLoaded', () => {
-    // Filtra e popula
-    populateSelect('cpu', pecas.filter(p => p.tipo === 'cpu'));
-    populateSelect('mobo', pecas.filter(p => p.tipo === 'mobo'));
-    populateSelect('gpu', pecas.filter(p => p.tipo === 'gpu'));
-    populateSelect('ram', pecas.filter(p => p.tipo === 'ram'));
-    populateSelect('psu', pecas.filter(p => p.tipo === 'psu'));
-    populateSelect('case', pecas.filter(p => p.tipo === 'case'));
+    console.log('🔍 Inicializando página de compatibilidade...');
+    
+    // Filtra e popula datalists
+    populateData('cpu', pecas.filter(p => p.tipo === 'cpu'));
+    populateData('mobo', pecas.filter(p => p.tipo === 'mobo'));
+    populateData('gpu', pecas.filter(p => p.tipo === 'gpu'));
+    populateData('ram', pecas.filter(p => p.tipo === 'ram'));
+    populateData('psu', pecas.filter(p => p.tipo === 'psu'));
+    populateData('case', pecas.filter(p => p.tipo === 'case'));
+
+    console.log('✅ Dados populados');
+    console.log('📊 Total de itens no mapa de peças:', Object.keys(pecasMap).length);
+
+    // Vincular inputs com autocomplete
+    setupAutocomplete('cpu', 'cpu-search', 'cpu-suggestions');
+    setupAutocomplete('mobo', 'mobo-search', 'mobo-suggestions');
+    setupAutocomplete('gpu', 'gpu-search', 'gpu-suggestions');
+    setupAutocomplete('ram', 'ram-search', 'ram-suggestions');
+    setupAutocomplete('psu', 'psu-search', 'psu-suggestions');
+    setupAutocomplete('case', 'case-search', 'case-suggestions');
+
+    console.log('✅ Autocomplete configurado');
 
     // Menu lateral
     const toggle = document.getElementById('menu-toggle');
@@ -20,13 +48,65 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('check-btn').addEventListener('click', verificarCompatibilidade);
 });
 
-function populateSelect(id, items) {
-    const select = document.getElementById(id);
+function populateData(tipo, items) {
+    pecasPorTipo[tipo] = items;
     items.forEach(item => {
-        const option = document.createElement('option');
-        option.value = item.id;
-        option.textContent = item.nome;
-        select.appendChild(option);
+        pecasMap[item.nome] = { id: item.id, tipo: tipo, ...item };
+    });
+}
+
+function setupAutocomplete(hiddenId, searchInputId, suggestionsId) {
+    const searchInput = document.getElementById(searchInputId);
+    const hiddenField = document.getElementById(hiddenId);
+    const suggestionsDiv = document.getElementById(suggestionsId);
+
+    searchInput.addEventListener('input', (e) => {
+        const searchValue = e.target.value.toLowerCase().trim();
+        
+        if (searchValue.length === 0) {
+            suggestionsDiv.classList.remove('active');
+            return;
+        }
+
+        // Filtrar sugestões
+        const matches = pecasPorTipo[hiddenId].filter(item =>
+            item.nome.toLowerCase().includes(searchValue)
+        );
+
+        if (matches.length === 0) {
+            suggestionsDiv.classList.remove('active');
+            return;
+        }
+
+        // Mostrar sugestões (máximo 8)
+        suggestionsDiv.innerHTML = '';
+        matches.slice(0, 8).forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'suggestion-item';
+            div.textContent = item.nome;
+            div.addEventListener('click', () => {
+                searchInput.value = item.nome;
+                hiddenField.value = item.id;
+                suggestionsDiv.classList.remove('active');
+            });
+            suggestionsDiv.appendChild(div);
+        });
+
+        suggestionsDiv.classList.add('active');
+    });
+
+    // Fechar sugestões ao sair do foco
+    searchInput.addEventListener('blur', () => {
+        setTimeout(() => {
+            suggestionsDiv.classList.remove('active');
+        }, 200);
+    });
+
+    // Fechar sugestões ao clicar em outro lugar
+    document.addEventListener('click', (e) => {
+        if (e.target !== searchInput && e.target !== suggestionsDiv && !suggestionsDiv.contains(e.target)) {
+            suggestionsDiv.classList.remove('active');
+        }
     });
 }
 
