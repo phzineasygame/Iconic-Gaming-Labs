@@ -81,6 +81,28 @@ background-color: rgba(200, 200, 200, 0.15);
     align-items: center;
 }
 
+@media (max-width: 900px) {
+    .apresentacao-time {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .banner-time {
+        height: 300px;
+    }
+}
+
+@media (max-width: 600px) {
+    .apresentacao-time {
+        padding: 0 20px;
+        margin-top: 80px;
+    }
+
+    .banner-time {
+        height: 220px;
+    }
+}
+
 .info-time {
     display: flex;
     flex-direction: column;
@@ -275,6 +297,22 @@ background-color: rgba(200, 200, 200, 0.15);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+}
+
+@media (max-width: 900px) {
+    .grid-jogadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-jogadores {
+        grid-template-columns: 1fr;
+    }
+
+    .card-jogador img {
+        height: 220px;
+    }
 }
 
 .card-jogador {
